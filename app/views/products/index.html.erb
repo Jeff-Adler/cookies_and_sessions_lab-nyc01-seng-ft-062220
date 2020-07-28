@@ -1,0 +1,12 @@
+<% cart.each do |i| %>
+    <p><%= i %></p>
+<% end %>
+<br>
+
+<%= form_tag ({controller: 'products',
+    action: 'add',
+    method: 'post'}) do %>
+
+  <input name=product>
+  <input type=submit value='add to cart'>
+<% end %>
